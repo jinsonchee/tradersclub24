@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TradersClub24 — UI Kit</title>
-<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -237,39 +237,40 @@
   .btn {
     display: inline-flex;
     align-items: center;
-    gap: 12px;
-    padding: 0 24px;
-    height: 48px;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 16px 20px 16px 24px;
     border-radius: var(--radius-btn);
     font-family: var(--font-sans);
-    font-size: 14px;
+    font-size: 20px;
     font-weight: 500;
     border: none;
     cursor: pointer;
     text-decoration: none;
     transition: opacity 0.2s, transform 0.15s;
     letter-spacing: -0.01em;
+    width: 100%;
+    max-width: 350px;
   }
   .btn:hover { opacity: 0.88; transform: translateY(-1px); }
   .btn-green { background: var(--green); color: var(--navy); }
   .btn-navy { background: var(--navy); color: var(--white); }
   .btn-white { background: var(--white); color: var(--navy); border: 1px solid var(--border); }
-  .btn-lg { height: 56px; padding: 0 32px; font-size: 15px; }
-  .btn-sm { height: 40px; padding: 0 16px; font-size: 13px; }
+  .btn-lg { font-size: 20px; }
+  .btn-sm { padding: 10px 16px 10px 16px; font-size: 14px; width: auto; max-width: none; justify-content: center; gap: 8px; }
 
   .btn-arrow {
-    width: 22px;
-    height: 22px;
+    width: 26px;
+    height: 26px;
     border-radius: 50%;
-    background: rgba(0,0,0,0.12);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
   }
-  .btn-green .btn-arrow { background: rgba(28,57,65,0.15); }
-  .btn-navy .btn-arrow { background: rgba(255,255,255,0.15); }
-  .btn-white .btn-arrow { background: rgba(28,57,65,0.08); }
+  .btn-green .btn-arrow { background: #1C3941; }
+  .btn-navy .btn-arrow { background: #FFFFFF; }
+  .btn-white .btn-arrow { background: #1C3941; }
 
   /* ── BADGES ── */
   .badge {
@@ -728,7 +729,7 @@
     margin-bottom: 16px;
     line-height: 1.2;
   }
-  .cta-light h2 span { color: var(--green-dark); }
+  .cta-light h2 span { color: var(--navy); font-weight: 700; }
   .cta-light p {
     color: var(--text-body);
     font-size: 16px;
@@ -819,7 +820,7 @@
     line-height: 1.15;
     margin-bottom: 20px;
   }
-  .hero-title span { color: var(--green-dark); }
+  .hero-title span { color: var(--navy); font-weight: 700; }
   .hero-body {
     font-size: 16px;
     color: var(--text-body);
@@ -1141,19 +1142,19 @@
       <span>Design Tokens</span>
     </div>
     <h2>Typography</h2>
-    <p>Lora for headlines — Inter for everything else. Letter spacing is always -3% for Lora and -1% for Inter.</p>
+    <p>Lora for headlines — Inter for everything else. Letter spacing always -3% for Lora and -1% for Inter. Keyword highlights: <strong>Lora Bold + Navy</strong> on light sections · <strong>Lora Medium + Green #C9E600</strong> on dark sections. The bold highlight (light sections) must always sit on its own line — never mid-sentence within a line.</p>
   </div>
 
   <div class="subsection-title" style="margin-bottom: 24px;">Lora — Headline Font</div>
 
   <div class="type-sample">
-    <div class="type-meta">Hero Headline — Lora Medium 48px / -3% tracking</div>
-    <div style="font-family: 'Lora', serif; font-size: 48px; font-weight: 500; color: #1C3941; letter-spacing: -0.03em; line-height: 1.15;">Trade smarter,<br>earn <span style="color: #C9E600;">consistently.</span></div>
+    <div class="type-meta">Hero Headline — Lora Medium 48px / -3% tracking · Bold highlight always on its own line</div>
+    <div style="font-family: 'Lora', serif; font-size: 48px; font-weight: 500; color: #1C3941; letter-spacing: -0.03em; line-height: 1.2;">The complete education that turns<br><span style="font-weight: 700;">beginners into successful traders.</span></div>
   </div>
 
   <div class="type-sample">
-    <div class="type-meta">Section Headline — Lora Medium 40px / -3% tracking</div>
-    <div style="font-family: 'Lora', serif; font-size: 40px; font-weight: 500; color: #1C3941; letter-spacing: -0.03em; line-height: 1.2;">What to expect in <span style="color: #C9E600;">30 days.</span></div>
+    <div class="type-meta">Section Headline — Lora Medium 40px / -3% tracking · Bold highlight always on its own line</div>
+    <div style="font-family: 'Lora', serif; font-size: 40px; font-weight: 500; color: #1C3941; letter-spacing: -0.03em; line-height: 1.2;">What to expect in<br><span style="font-weight: 700;">the next 30 days.</span></div>
   </div>
 
   <div class="type-sample">
@@ -1190,8 +1191,8 @@
   </div>
 
   <div class="type-sample" style="background: #0D1C20;">
-    <div class="type-meta" style="color: rgba(255,255,255,0.4);">On Dark Background — White headline / 90% white body</div>
-    <div style="font-family: 'Lora', serif; font-size: 40px; font-weight: 500; color: #FFFFFF; letter-spacing: -0.03em; margin-bottom: 12px;">Start trading <span style="color: #C9E600;">today.</span></div>
+    <div class="type-meta" style="color: rgba(255,255,255,0.4);">On Dark Background — White Medium headline / Green Medium highlight on its own line</div>
+    <div style="font-family: 'Lora', serif; font-size: 40px; font-weight: 500; color: #FFFFFF; letter-spacing: -0.03em; line-height: 1.2; margin-bottom: 12px;">Profitable trading<br><span style="color: #C9E600;">stands on 3 pillars.</span></div>
     <div style="font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 400; color: rgba(255,255,255,0.9); letter-spacing: -0.01em; line-height: 1.7;">Join over 4,500 active club members and watch Carlos trade live every market day.</div>
   </div>
 </section>
@@ -1266,27 +1267,27 @@
       <span>Components</span>
     </div>
     <h2>Buttons</h2>
-    <p>Three variants × three sizes. Border radius is always 6px. Buttons with arrows include a circular icon container on the right.</p>
+    <p>Three variants × three sizes. Border radius always 6px. Base CTA text size is <strong>20px</strong> for all button variants. Small buttons use 14px. Arrow icon always on the right in a circular container.</p>
   </div>
 
-  <div class="subsection-title">Primary Variants — Default Size (48px height)</div>
+  <div class="subsection-title">Primary Variants — Full Width 350px · 16px padding · Inter Semibold 20px · -1% tracking</div>
   <div class="flex-row" style="margin-bottom: 40px;">
     <a class="btn btn-green" href="#">
       Get Free Access
       <span class="btn-arrow">
-        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 6H9.5M6.5 3L9.5 6L6.5 9" stroke="#1C3941" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <svg width="14" height="14" viewBox="0 0 12 12" fill="none"><path d="M2.5 6H9.5M6.5 3L9.5 6L6.5 9" stroke="#C2DD00" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </span>
     </a>
     <a class="btn btn-navy" href="#">
       Become a Member
       <span class="btn-arrow">
-        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 6H9.5M6.5 3L9.5 6L6.5 9" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <svg width="14" height="14" viewBox="0 0 12 12" fill="none"><path d="M2.5 6H9.5M6.5 3L9.5 6L6.5 9" stroke="#1C3941" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </span>
     </a>
     <a class="btn btn-white" href="#">
       Learn More
       <span class="btn-arrow">
-        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 6H9.5M6.5 3L9.5 6L6.5 9" stroke="#1C3941" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <svg width="14" height="14" viewBox="0 0 12 12" fill="none"><path d="M2.5 6H9.5M6.5 3L9.5 6L6.5 9" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </span>
     </a>
   </div>
@@ -1296,19 +1297,19 @@
     <a class="btn btn-green btn-lg" href="#">
       Start Trading Free
       <span class="btn-arrow">
-        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 6H9.5M6.5 3L9.5 6L6.5 9" stroke="#1C3941" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <svg width="14" height="14" viewBox="0 0 12 12" fill="none"><path d="M2.5 6H9.5M6.5 3L9.5 6L6.5 9" stroke="#C2DD00" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </span>
     </a>
     <a class="btn btn-navy btn-lg" href="#">
       Become a Member
       <span class="btn-arrow">
-        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 6H9.5M6.5 3L9.5 6L6.5 9" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <svg width="14" height="14" viewBox="0 0 12 12" fill="none"><path d="M2.5 6H9.5M6.5 3L9.5 6L6.5 9" stroke="#1C3941" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </span>
     </a>
     <a class="btn btn-white btn-lg" href="#">
       Try for Free
       <span class="btn-arrow">
-        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 6H9.5M6.5 3L9.5 6L6.5 9" stroke="#1C3941" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <svg width="14" height="14" viewBox="0 0 12 12" fill="none"><path d="M2.5 6H9.5M6.5 3L9.5 6L6.5 9" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </span>
     </a>
   </div>
@@ -1325,13 +1326,13 @@
     <a class="btn btn-green" href="#">
       Start for Free
       <span class="btn-arrow">
-        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 6H9.5M6.5 3L9.5 6L6.5 9" stroke="#1C3941" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <svg width="14" height="14" viewBox="0 0 12 12" fill="none"><path d="M2.5 6H9.5M6.5 3L9.5 6L6.5 9" stroke="#C2DD00" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </span>
     </a>
     <a class="btn btn-white" href="#">
       Try Free for 30 Days
       <span class="btn-arrow">
-        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 6H9.5M6.5 3L9.5 6L6.5 9" stroke="#1C3941" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <svg width="14" height="14" viewBox="0 0 12 12" fill="none"><path d="M2.5 6H9.5M6.5 3L9.5 6L6.5 9" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </span>
     </a>
   </div>
@@ -1553,7 +1554,7 @@
           <span style="font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: #707070;">Trusted since 2009</span>
         </div>
       </div>
-      <h1 class="hero-title">Learn trading,<br>free & <span>without obligation.</span></h1>
+      <h1 class="hero-title">Learn trading, free<br><span>& without obligation.</span></h1>
       <p class="hero-body">Watch Carlos Martins trade live every day. Real market, real money account, real results — from your very first day.</p>
       <ul class="hero-checklist">
         <li>
@@ -1576,7 +1577,7 @@
       <div class="flex-row">
         <a class="btn btn-green btn-lg" href="#">
           Start Trading Free
-          <span class="btn-arrow"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 6H9.5M6.5 3L9.5 6L6.5 9" stroke="#1C3941" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span class="btn-arrow"><svg width="14" height="14" viewBox="0 0 12 12" fill="none"><path d="M2.5 6H9.5M6.5 3L9.5 6L6.5 9" stroke="#C2DD00" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         </a>
       </div>
     </div>
@@ -1592,11 +1593,11 @@
   <div class="subsection-title" style="margin-bottom: 24px;">Variant B — Text left, Graphic right (Alternative)</div>
   <div style="background: #FFFFFF; border: 1px solid #EBEBEB; border-radius: 10px; padding: 64px 80px; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;">
     <div>
-      <h1 style="font-family: 'Lora', serif; font-size: 48px; font-weight: 500; color: #1C3941; letter-spacing: -0.03em; line-height: 1.15; margin-bottom: 20px;">Build wealth<br>across <span style="color: #C9E600;">generations.</span></h1>
+      <h1 style="font-family: 'Lora', serif; font-size: 48px; font-weight: 500; color: #1C3941; letter-spacing: -0.03em; line-height: 1.2; margin-bottom: 20px;">Build wealth<br><span style="font-weight: 700;">across generations.</span></h1>
       <p style="font-size: 16px; color: #707070; line-height: 1.7; margin-bottom: 32px;">The classic saver loses money to inflation. With equities you build real long-term wealth — systematically, transparently, guided by experts.</p>
       <a class="btn btn-green btn-lg" href="#">
         Become a Club Member
-        <span class="btn-arrow"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 6H9.5M6.5 3L9.5 6L6.5 9" stroke="#1C3941" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span class="btn-arrow"><svg width="14" height="14" viewBox="0 0 12 12" fill="none"><path d="M2.5 6H9.5M6.5 3L9.5 6L6.5 9" stroke="#C2DD00" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
       </a>
     </div>
     <div style="background: #F4F4F4; border-radius: 10px; height: 280px; display: flex; align-items: center; justify-content: center; color: #BCBCBC; font-size: 13px; text-align: center;">
@@ -1947,7 +1948,7 @@
     </div>
     <a class="btn btn-green btn-lg" href="#">
       Send Message
-      <span class="btn-arrow"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 6H9.5M6.5 3L9.5 6L6.5 9" stroke="#1C3941" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <span class="btn-arrow"><svg width="14" height="14" viewBox="0 0 12 12" fill="none"><path d="M2.5 6H9.5M6.5 3L9.5 6L6.5 9" stroke="#C2DD00" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
     </a>
   </div>
 </section>
@@ -1968,16 +1969,16 @@
       <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" fill="#C2DD00"/><path d="M5.5 9l2.5 2.5 4.5-5" stroke="#1C3941" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
       <span style="font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.5);">Join Now</span>
     </div>
-    <h2>Start trading <span>for free</span><br>from today.</h2>
+    <h2>Start trading for free<br><span>from today.</span></h2>
     <p>4,500+ traders are already part of it. Watch Carlos trade live every market day — and decide for yourself if it's right for you.</p>
     <div class="cta-buttons">
       <a class="btn btn-green btn-lg" href="#">
         Start Trading Free
-        <span class="btn-arrow"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 6H9.5M6.5 3L9.5 6L6.5 9" stroke="#1C3941" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span class="btn-arrow"><svg width="14" height="14" viewBox="0 0 12 12" fill="none"><path d="M2.5 6H9.5M6.5 3L9.5 6L6.5 9" stroke="#C2DD00" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
       </a>
       <a class="btn btn-white btn-lg" href="#">
         Test Free for 30 Days
-        <span class="btn-arrow"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 6H9.5M6.5 3L9.5 6L6.5 9" stroke="#1C3941" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span class="btn-arrow"><svg width="14" height="14" viewBox="0 0 12 12" fill="none"><path d="M2.5 6H9.5M6.5 3L9.5 6L6.5 9" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
       </a>
     </div>
     <div style="margin-top: 24px;">
@@ -1995,12 +1996,12 @@
   </div>
 
   <div class="cta-light">
-    <h2>Ready to <span>invest</span> yourself?</h2>
+    <h2>Ready to invest<br><span>yourself?</span></h2>
     <p>Become a club member and start with the foundation course and investment workshop — guided by experts with real experience from professional investment banking.</p>
     <div class="cta-buttons">
       <a class="btn btn-green btn-lg" href="#">
         Become a Club Member
-        <span class="btn-arrow"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 6H9.5M6.5 3L9.5 6L6.5 9" stroke="#1C3941" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span class="btn-arrow"><svg width="14" height="14" viewBox="0 0 12 12" fill="none"><path d="M2.5 6H9.5M6.5 3L9.5 6L6.5 9" stroke="#C2DD00" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
       </a>
     </div>
   </div>
